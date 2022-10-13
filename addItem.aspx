@@ -66,6 +66,18 @@
             </tr>
             <tr>
                 <td>
+                    Priority :
+                </td>
+                <td>
+                    <asp:DropDownList ID="DropDownList1" runat="server" Width="97%">
+                        <asp:ListItem>High</asp:ListItem>
+                        <asp:ListItem>Medium</asp:ListItem>
+                        <asp:ListItem>Low</asp:ListItem>
+                    </asp:DropDownList>
+                </td>
+            </tr>
+            <tr>
+                <td>
                                 <asp:Button ID="Button2" runat="server" Text="Cancel" BackColor="#FF3300" OnClick="Button2_Click" />
 
                 </td>

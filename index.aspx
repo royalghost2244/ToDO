@@ -19,26 +19,25 @@
             </tr>
             <tr>
                 <td colspan="3">
-                    <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataSourceID="SqlDataSource1" CellPadding="4" ForeColor="#333333" GridLines="None">
-                    <AlternatingRowStyle BackColor="White" />
+                    <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataSourceID="SqlDataSource1" CellPadding="3" BackColor="#DEBA84" BorderColor="#DEBA84" BorderStyle="None" BorderWidth="1px" CellSpacing="2">
                     <Columns>
                         <asp:BoundField DataField="title" HeaderText="Title" SortExpression="title" />
                         <asp:BoundField DataField="description" HeaderText="Description" SortExpression="description" />
                         <asp:BoundField DataField="Sdate" HeaderText="Start Date" SortExpression="Sdate" />
-                        <asp:BoundField DataField="Stime" HeaderText="Start time" SortExpression="Stime" />
+                        <asp:BoundField DataField="Stime" HeaderText="Start Time" SortExpression="Stime" />
                         <asp:BoundField DataField="Edate" HeaderText="End Date" SortExpression="Edate" />
                         <asp:BoundField DataField="Etime" HeaderText="End Time" SortExpression="Etime" />
+                        <asp:BoundField DataField="Priority" HeaderText="Priority" SortExpression="Priority" />
                     </Columns>
-                    <EditRowStyle BackColor="#2461BF" />
-                    <FooterStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
-                    <HeaderStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
-                    <PagerStyle BackColor="#2461BF" ForeColor="White" HorizontalAlign="Center" />
-                    <RowStyle BackColor="#EFF3FB" />
-                    <SelectedRowStyle BackColor="#D1DDF1" Font-Bold="True" ForeColor="#333333" />
-                    <SortedAscendingCellStyle BackColor="#F5F7FB" />
-                    <SortedAscendingHeaderStyle BackColor="#6D95E1" />
-                    <SortedDescendingCellStyle BackColor="#E9EBEF" />
-                    <SortedDescendingHeaderStyle BackColor="#4870BE" />
+                    <FooterStyle BackColor="#F7DFB5" ForeColor="#8C4510" />
+                    <HeaderStyle BackColor="#A55129" Font-Bold="True" ForeColor="White" />
+                    <PagerStyle ForeColor="#8C4510" HorizontalAlign="Center" />
+                    <RowStyle BackColor="#FFF7E7" ForeColor="#8C4510" />
+                    <SelectedRowStyle BackColor="#738A9C" Font-Bold="True" ForeColor="White" />
+                    <SortedAscendingCellStyle BackColor="#FFF1D4" />
+                    <SortedAscendingHeaderStyle BackColor="#B95C30" />
+                    <SortedDescendingCellStyle BackColor="#F1E5CE" />
+                    <SortedDescendingHeaderStyle BackColor="#93451F" />
                 </asp:GridView>
                 </td>
             </tr>
@@ -59,7 +58,7 @@
         <div>
             
                 
-                 <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT * FROM [ToDo]"></asp:SqlDataSource>
+                 <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT * FROM [ToDo] ORDER BY [Priority], [Sdate], [Stime]"></asp:SqlDataSource>
                  <br />
         <br />
 

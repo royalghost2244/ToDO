@@ -18,7 +18,7 @@ namespace ToDO
         {
             con.Open();
            
-            SqlCommand xyz = new SqlCommand("Insert into [ToDo] values('" + TextBox1.Text + "','" + TextBox2.Text + "','" + TextBox3.Text + "','" + TextBox4.Text + "','" + TextBox5.Text + "','" + TextBox6.Text + "')", con);
+            SqlCommand xyz = new SqlCommand("Insert into [ToDo] values('" + TextBox1.Text + "','" + TextBox2.Text + "','" + TextBox3.Text + "','" + TextBox4.Text + "','" + TextBox5.Text + "','" + TextBox6.Text + "','" + DropDownList1.SelectedValue + "')", con);
 
             xyz.ExecuteNonQuery();
             con.Close();
